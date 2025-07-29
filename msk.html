@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="msk.css">
+    <title>Document</title>
+</head>
+
+<div>
+    <div class="nav">
+        <div class="logo">
+            <div class="msk"> MSK!nstitute</div>
+            <div class="for">for Coding Classes</div>
+        </div>
+        <div class="right">
+            <div class="link">
+                <a href="">Home</a>
+                <a href="#">Courses</a>
+                <a href="#">Notes</a>
+                <a href="#">Tools</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="men"><button onclick="openPopup()">Admission</button></div>
+        </div>
+    </div>
+    <div class="con">
+        <div class="box">
+            <div class="ins">MSK Institute</div>
+            <div class="com">Computer Training Institute</div>
+            <div class="best">Best for learning coding in Shikohabad</div>
+            <div class="join"><button onclick="openPopup()">Loge IN</button></div>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="C:\Users\MSK-Institute\Pictures\Screenshots\Screenshot 2025-06-28 145522.png" alt="">
+            </div>
+            <div class="content">
+                <h1>Eng. Sumit Kumar</h1>
+                <p>
+                    CEO, Founder of MSK-Institute <br> Software Engineer and trainer <br> for <span> </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ai code -->
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popup">
+        <div class="popup-form">
+            <div class="close-btn" onclick="closePopup()">✖</div>
+
+            <div class="tab-switch">
+                <button id="loginTab" class="active" onclick="switchTab('login')">Login</button>
+                <button id="registerTab" onclick="switchTab('register')">Register</button>
+            </div>
+
+            <form id="loginForm">
+                <h2>Login</h2>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+
+            <form id="registerForm" style="display:none;">
+                <h2>Register</h2>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    const popup = document.getElementById("popup");
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
+
+    const loginTab = document.getElementById("loginTab");
+    const registerTab = document.getElementById("registerTab");
+
+    function openPopup() {
+        popup.classList.add("active");
+    }
+
+    function closePopup() {
+        popup.classList.remove("active");
+    }
+
+    function switchTab(tab) {
+        if (tab === "login") {
+            loginForm.style.display = "block";
+            registerForm.style.display = "none";
+            loginTab.classList.add("active");
+            registerTab.classList.remove("active");
+        } else {
+            loginForm.style.display = "none";
+            registerForm.style.display = "block";
+            loginTab.classList.remove("active");
+            registerTab.classList.add("active");
+        }
+    }
+
+    // Optional: Close popup when clicking outside form
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) closePopup();
+    });
+</script>
+</body>
+
+</html>
+
+
+</body>
+<script src="msk.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>
