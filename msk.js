@@ -52,3 +52,4 @@ function openPopup() {
       popup.classList.remove("active");
     }
 
+console.log("anshu");
